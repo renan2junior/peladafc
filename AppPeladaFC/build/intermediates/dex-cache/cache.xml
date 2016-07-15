@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.0.0_a9aab03ac48b616b2b3c7e317cb1e841af0a2a35/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="23e144605a44131e1306c1b92612542990e9d437">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_69a37b6f7c6e6d1965b2db1fdc2f5ef8838e59cf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.0.0_89aac2d411a8d0587c2dd0f6b3b01f4226bc47a1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="cf36e6795c272e58efc03a135be982cb2f80091d">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ae302b4330c7b99c40ee7cd3047eb0af310e827a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.0.0_0e0e9da8caa9944e06a74b3ec4d9e488646ece4a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.0.0_045a612a6b067f41d96cecd0114dd8a520024d58/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_2c225bbee94ac2f81e090d8aab0a492d3031c48f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_27579fac7e5f873d7f45e6b9bc16d2dc0ed13b1a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_db3e83a81ed1c3b30063db84924bdcb4cf60050b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/renanjunior/peladafc/AppPeladaFC/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0_c1e39b1b96af33e99091b95459b6f9678a6b072d/classes.dex" />
+    </item>
+
+</items>
