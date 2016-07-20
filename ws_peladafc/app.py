@@ -8,6 +8,7 @@ from models.jogador import Jogador
 from models.pagamento import Pagamento
 from models.pelada import Pelada
 from models.user import User
+from models.campo import Campo
 
 
 app = Flask(__name__)
@@ -187,7 +188,7 @@ def get_times():
     lista = []
     for item in times:
         lista.append(Time.to_json(item))
-    return jsonify(times)
+    return jsonify(lista)
 
 
 @app.route('/time/', methods=['POST'])
@@ -221,6 +222,49 @@ def remove_time(id):
         pass
     return response
 
+
+#Metodos para campos
+
+
+@app.route('/campo/', methods=['GET'])
+def get_campos():
+    campos = Campo.query.all()
+    lista = []
+    for item in campos:
+        lista.append(Campo.to_json(item))
+    return jsonify(lista)
+
+
+@app.route('/campo/', methods=['POST'])
+def new_campo():
+    campo = Campo().from_json(request.json)
+    response = jsonify({})
+    try:
+        db.session.add(campo)
+        db.session.commit()
+        response.status_code = 200
+    except exc.IntegrityError as e:
+        print(e)
+        db.session.remove()
+        response.status_code = 400
+        pass
+    return response
+
+
+@app.route('/campo/<int:id>', methods=['DELETE'])
+def remove_campo(id):
+    response = jsonify({})
+    try:
+        campo = Campo.query.get_or_404(id)
+        db.session.delete(campo)
+        db.session.commit()
+        response.status_code = 200
+    except exc.SQLAlchemyError as e:
+        response.status_code = 400
+        print(e)
+        db.session.remove()
+        pass
+    return response
 
 # Metodo de boas vindas
 
