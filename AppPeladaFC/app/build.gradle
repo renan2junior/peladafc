@@ -27,6 +27,8 @@ dependencies {
     compile 'com.android.support:design:24.0.0'
     compile 'com.firebase:firebase-client-android:2.3.1'
     compile 'com.google.firebase:firebase-messaging:9.2.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'com.google.firebase:firebase-auth:9.2.0'
 
     def espressoVersion = '2.2.2'
     def testRunnerVersion = '0.5'

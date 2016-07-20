@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.FacebookSdk;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -45,8 +46,13 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+        // Iniciando o firebase para push notification
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         Log.d("Meu teste", "InstanceID token: " + FirebaseInstanceId.getInstance().getToken());
+
+        // Iniciando interação com o plugin do facebook
+        FacebookSdk.sdkInitialize(getApplicationContext());
 
     }
 
