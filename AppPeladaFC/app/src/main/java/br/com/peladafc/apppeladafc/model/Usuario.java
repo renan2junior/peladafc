@@ -1,0 +1,1 @@
+package br.com.peladafc.apppeladafc.model;/** * Created by renanjunior on 7/22/16. */public class Usuario {}

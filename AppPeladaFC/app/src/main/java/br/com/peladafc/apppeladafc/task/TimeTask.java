@@ -1,0 +1,1 @@
+package br.com.peladafc.apppeladafc.task;import android.os.AsyncTask;/** * Created by renanjunior on 7/25/16. */class TimeTask extends AsyncTask<String, Void, Void> {    @Override    protected Void doInBackground(String... strings) {        return null;    }}
