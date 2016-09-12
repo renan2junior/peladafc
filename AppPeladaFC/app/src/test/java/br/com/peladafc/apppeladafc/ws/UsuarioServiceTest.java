@@ -1,0 +1,1 @@
+package br.com.peladafc.apppeladafc.ws;import org.junit.Test;/** * Created by renanjunior on 9/12/16. */public class UsuarioServiceTest {    @Test    public void testGetUsuario() throws Exception{        UsuarioService s = new UsuarioService();        s.GetUsuario();    }}

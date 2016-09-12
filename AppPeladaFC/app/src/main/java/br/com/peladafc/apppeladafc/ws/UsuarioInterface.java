@@ -1,0 +1,1 @@
+package br.com.peladafc.apppeladafc.ws;import java.util.List;import br.com.peladafc.apppeladafc.model.Usuario;import retrofit2.Call;import retrofit2.http.GET;/** * Created by renanjunior on 9/12/16. */public interface UsuarioInterface {    @GET("/usuario/")    Call<List<Usuario>> getUsuario();}
