@@ -26,7 +26,7 @@ public class GrupoServiceTest {
     @Test
     public void testCreateGrupo() throws Exception{
         Grupo t = new Grupo();
-        t.setNome_grupo("CICM");
+        t.setNome_grupo("CICM3");
         t.setNome_contato("Renan");
         t.setEmail_contato("renan2junior@gmail.com");
         t.setTelefone_grupo("21 967752534");
