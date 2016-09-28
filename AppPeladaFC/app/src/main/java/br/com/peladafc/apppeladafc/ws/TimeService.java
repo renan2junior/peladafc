@@ -1,1 +1,77 @@
-package br.com.peladafc.apppeladafc.ws;import android.provider.Settings;import java.io.IOException;import java.util.ArrayList;import java.util.List;import br.com.peladafc.apppeladafc.model.Time;import br.com.peladafc.apppeladafc.util.UtilJson;import retrofit2.Call;import retrofit2.Callback;import retrofit2.Response;import retrofit2.Retrofit;import retrofit2.converter.gson.GsonConverterFactory;/** * Created by renanjunior on 7/22/16. */public class TimeService {    public List<Time> GetTime(){        Call<List<Time>> call = ((TimeInterface)RestClient.getInstance(TimeInterface.class)).getTime() ;        List<Time> times = null;        try {            times = call.execute().body();        } catch (IOException e) {            e.printStackTrace();        }        System.out.print("Teste : " + times);        for(int i =0 ; i < times.size(); i++) {            System.out.print("Time : " + UtilJson.toJson(times.get(i)));        }        return times;    }    public List<Time> listaTimes(){        Retrofit retrofit = new Retrofit.Builder()                .baseUrl("https://apppeladafc.herokuapp.com")                .addConverterFactory(GsonConverterFactory.create())                .build();        TimeInterface service = retrofit.create(TimeInterface.class);        Call<List<Time>> call = service.getTime();        List<Time> times = null;        try {            times = call.execute().body();        } catch (IOException e) {            e.printStackTrace();        }        System.out.print("Teste : " + times);        for(int i =0 ; i < times.size(); i++){            System.out.print("Time : " + UtilJson.toJson(times.get(i)));        }        /*call.enqueue(new Callback<List<Time>>() {            @Override            public void onResponse(Call<List<Time>> call, Response<List<Time>> response) {                System.out.print("Teste : " + response);            }            @Override            public void onFailure(Call<List<Time>> call, Throwable t) {                System.out.print("DEU ERRO");            }        });*/        return times;    }}
+package br.com.peladafc.apppeladafc.ws;
+
+import java.io.IOException;
+import java.util.List;
+import br.com.peladafc.apppeladafc.model.Time;
+import br.com.peladafc.apppeladafc.util.UtilJson;
+import retrofit2.Call;
+
+/**
+ * Created by renanjunior on 7/22/16.
+ */
+public class TimeService {
+
+    TimeInterface timeInterface;
+
+
+    public TimeService(){
+        timeInterface = ((TimeInterface)RestClient.getInstance(TimeInterface.class));
+    }
+
+    public List<Time> listaTimes(){
+        Call<List<Time>> call = timeInterface.getTime();
+        List<Time> times = null;
+        try {
+            times = call.execute().body();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for(int i =0 ; i < times.size(); i++) {
+            System.out.print("Time : " + UtilJson.toJson(times.get(i)));
+        }
+        return times;
+    }
+
+    public Time createTime(Time time){
+        Call<Time> call = timeInterface.createTime(time);
+        try {
+            time = call.execute().body();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        System.out.print("Time : " + time.getNome());
+        return time;
+    }
+
+    public void deleteTime(String id){
+        Call<Void> call = timeInterface.deleteTime(id);
+        try{
+            call.execute().body();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public Time getTimeByID(String id){
+        Call<Time> call = timeInterface.getTimeByID(id);
+        Time time = null;
+        try {
+            time = call.execute().body();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return time;
+    }
+
+    public Time updateTime(Time time){
+        Call<Time> call = timeInterface.updateTime(time);
+        Time time_retorno = null;
+        try{
+            time_retorno = call.execute().body();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return time_retorno;
+    }
+
+}
