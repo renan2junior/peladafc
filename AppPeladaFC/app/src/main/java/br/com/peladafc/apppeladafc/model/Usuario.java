@@ -5,25 +5,29 @@ package br.com.peladafc.apppeladafc.model;
  */
 public class Usuario {
 
-    private int id;
+    private Integer id;
     private String nome;
     private String email;
     private String telefone;
     private Boolean mensalista;
-    private int time_id;
-    private int tipo_usuario_id ;
+    private Time time;
+    private TipoUsuario tipo_usuario ;
 
-    public Usuario(int id, String nome, String email, String telefone, Boolean mensalista, int time_id, int tipo_usuario_id) {
+    public Usuario(int id, String nome, String email, String telefone, Boolean mensalista, Time time, TipoUsuario tipo_usuario) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
         this.mensalista = mensalista;
-        this.time_id = time_id;
-        this.tipo_usuario_id = tipo_usuario_id;
+        this.time = time;
+        this.tipo_usuario = tipo_usuario;
     }
 
     public Usuario() {
+    }
+
+    public Usuario(Integer id) {
+        this.id = id;
     }
 
     @Override
@@ -34,16 +38,16 @@ public class Usuario {
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", mensalista=" + mensalista +
-                ", time_id=" + time_id +
-                ", tipo_usuario_id=" + tipo_usuario_id +
+                ", time_id=" + time +
+                ", tipo_usuario_id=" + tipo_usuario +
                 '}';
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -79,20 +83,20 @@ public class Usuario {
         this.mensalista = mensalista;
     }
 
-    public int getTime_id() {
-        return time_id;
+    public Time getTime() {
+        return time;
     }
 
-    public void setTime_id(int time_id) {
-        this.time_id = time_id;
+    public void setTime(Time time) {
+        this.time = time;
     }
 
-    public int getTipo_usuario_id() {
-        return tipo_usuario_id;
+    public TipoUsuario getTipoUsuario() {
+        return tipo_usuario;
     }
 
-    public void setTipo_usuario_id(int tipo_usuario_id) {
-        this.tipo_usuario_id = tipo_usuario_id;
+    public void setTipoUsuario(TipoUsuario tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
     }
     //tipo_usuario = db.relationship('TipoUsuario', backref=db.backref('post', lazy='dynamic',cascade='all,delete'))
     //private  time = db.relationship('Time', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))

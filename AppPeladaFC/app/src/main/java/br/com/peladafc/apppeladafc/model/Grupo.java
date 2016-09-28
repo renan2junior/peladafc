@@ -6,15 +6,15 @@ package br.com.peladafc.apppeladafc.model;
 
 public class Grupo {
 
-    private int id;
-    private  String nome_contato;
+    private Integer id;
+    private String nome_contato;
     private String email_contato;
     private String nome_grupo;
     private String horario;
     private String telefone_grupo;
     private String conta_grupo;
-    private int usuario_id;
-    private int local_id;
+    private Usuario usuario;
+    private Local local;
 
     @Override
     public String toString() {
@@ -26,15 +26,15 @@ public class Grupo {
                 ", horario='" + horario + '\'' +
                 ", telefone_grupo='" + telefone_grupo + '\'' +
                 ", conta_grupo='" + conta_grupo + '\'' +
-                ", usuario_id=" + usuario_id +
-                ", local_id=" + local_id +
+                ", usuario=" + usuario +
+                ", local=" + local +
                 '}';
     }
 
     public Grupo() {
     }
 
-    public Grupo(int id, String nome_contato, String email_contato, String nome_grupo, String horario, String telefone_grupo, String conta_grupo, int usuario_id, int local_id) {
+    public Grupo(Integer id, String nome_contato, String email_contato, String nome_grupo, String horario, String telefone_grupo, String conta_grupo, Usuario usuario, Local local) {
 
         this.id = id;
         this.nome_contato = nome_contato;
@@ -43,16 +43,16 @@ public class Grupo {
         this.horario = horario;
         this.telefone_grupo = telefone_grupo;
         this.conta_grupo = conta_grupo;
-        this.usuario_id = usuario_id;
-        this.local_id = local_id;
+        this.usuario = usuario;
+        this.local = local;
     }
 
-    public int getId() {
+    public Integer getId() {
 
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -104,20 +104,20 @@ public class Grupo {
         this.conta_grupo = conta_grupo;
     }
 
-    public int getUsuario_id() {
-        return usuario_id;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUsuario_id(int usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public int getLocal_id() {
-        return local_id;
+    public Local getLocal() {
+        return local;
     }
 
-    public void setLocal_id(int local_id) {
-        this.local_id = local_id;
+    public void setLocal(Local local) {
+        this.local = local;
     }
 //local = db.relationship('Local', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))
     //usuario = db.relationship('Usuario', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))
