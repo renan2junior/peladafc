@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RestClient {
     // Producao
-    //private static final String BASE_URL = "https://apppeladafc.herokuapp.com";
+    // private static final String BASE_URL = "https://apppeladafc.herokuapp.com";
     // Teste
     private static final String BASE_URL = "http://127.0.0.1:5000";
     public static Object getInstance(Class cl){

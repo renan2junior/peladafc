@@ -3,6 +3,8 @@ package br.com.peladafc.apppeladafc.ws;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.com.peladafc.apppeladafc.model.Time;
+import br.com.peladafc.apppeladafc.model.TipoUsuario;
 import br.com.peladafc.apppeladafc.model.Usuario;
 
 /**
@@ -30,8 +32,8 @@ public class UsuarioServiceTest {
         t.setEmail("renan2junior@gmail.com");
         t.setMensalista(true);
         t.setTelefone("21 967752534");
-        t.setTime_id(1);
-        t.setTipo_usuario_id(1);
+        t.setTime(new Time(1));
+        t.setTipoUsuario(new TipoUsuario(1));
         s.createUsuario(t);
 
         Usuario t2 = new Usuario();
@@ -39,8 +41,8 @@ public class UsuarioServiceTest {
         t2.setEmail("ze@gmail.com");
         t2.setMensalista(true);
         t2.setTelefone("21 111122222");
-        t2.setTime_id(12);
-        t.setTipo_usuario_id(1);
+        t2.setTime(new Time(12));
+        t.setTipoUsuario(new TipoUsuario(1));
         s.createUsuario(t2);
 
     }

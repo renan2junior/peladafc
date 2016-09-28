@@ -6,7 +6,7 @@ package br.com.peladafc.apppeladafc.model;
 
 public class Local {
 
-    private int id;
+    private Integer id;
     private String nome;
     private String endereco;
     private String nome_contato;
@@ -30,8 +30,11 @@ public class Local {
     public Local() {
     }
 
-    public Local(int id, String nome, String endereco, String nome_contato, String email_contato, String telefone_contato, String conta_deposito) {
+    public Local(Integer id) {
+        this.id = id;
+    }
 
+    public Local(int id, String nome, String endereco, String nome_contato, String email_contato, String telefone_contato, String conta_deposito) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
@@ -42,7 +45,6 @@ public class Local {
     }
 
     public int getId() {
-
         return id;
     }
 
