@@ -27,25 +27,27 @@ public class GrupoServiceTest {
 
     @Test
     public void testCreateGrupo() throws Exception{
+        LocalServiceTest localTest = new LocalServiceTest();
+        Local local = localTest.getLocal();
         Grupo t = new Grupo();
-        t.setNome_grupo("CICM3");
-        t.setNome_contato("Renan");
-        t.setEmail_contato("renan2junior@gmail.com");
-        t.setTelefone_grupo("21 967752534");
+        t.setNome("CICM3");
+        t.setNomeContato("Renan");
+        t.setEmailContato("renan2junior@gmail.com");
+        t.setTelefone("21 967752534");
         t.setHorario("10:00");
-        t.setConta_grupo("100 / 2345");
-        t.setLocal(new Local(1));
+        t.setConta("100 / 2345");
+        t.setLocal(local);
         t.setUsuario(new Usuario(1));
         s.createGrupo(t);
 
         Grupo t2 = new Grupo();
-        t2.setNome_grupo("IGREJA");
-        t2.setNome_contato("Thiago");
-        t2.setEmail_contato("thiago@gmail.com");
-        t2.setTelefone_grupo("21 222233333");
+        t2.setNome("IGREJA");
+        t2.setNomeContato("Thiago");
+        t2.setEmailContato("thiago@gmail.com");
+        t2.setTelefone("21 222233333");
         t2.setHorario("10:00");
-        t2.setConta_grupo("408 / 3232");
-        t2.setLocal(new Local(1));
+        t2.setConta("408 / 3232");
+        t2.setLocal(local);
         t2.setUsuario(new Usuario(1));
         s.createGrupo(t2);
 
@@ -64,7 +66,7 @@ public class GrupoServiceTest {
     @Test
     public void testUpdateGrupo() throws Exception{
         Grupo grupo = s.getGrupoByID("1");
-        grupo.setNome_contato("Clodoaldo Silva");
+        grupo.setNomeContato("Clodoaldo Silva");
         s.updateGrupo(grupo);
     }
 

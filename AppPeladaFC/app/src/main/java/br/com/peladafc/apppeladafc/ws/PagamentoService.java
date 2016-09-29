@@ -42,7 +42,7 @@ public class PagamentoService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.print("Pagamento : " + pagamento.getMes_ano());
+        System.out.print("Pagamento : " + pagamento.getMesAno());
         return pagamento;
     }
 

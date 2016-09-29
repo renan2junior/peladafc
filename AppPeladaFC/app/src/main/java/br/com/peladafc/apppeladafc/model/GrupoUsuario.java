@@ -44,7 +44,7 @@ public class GrupoUsuario {
         this.grupo = grupo;
     }
 
-    public TipoUsuario getTipoUsuario_id() {
+    public TipoUsuario getTipoUsuario() {
         return tipo_usuario;
     }
 

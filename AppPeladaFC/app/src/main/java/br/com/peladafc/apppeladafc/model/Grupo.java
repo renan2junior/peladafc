@@ -35,7 +35,6 @@ public class Grupo {
     }
 
     public Grupo(Integer id, String nome_contato, String email_contato, String nome_grupo, String horario, String telefone_grupo, String conta_grupo, Usuario usuario, Local local) {
-
         this.id = id;
         this.nome_contato = nome_contato;
         this.email_contato = email_contato;
@@ -48,7 +47,6 @@ public class Grupo {
     }
 
     public Integer getId() {
-
         return id;
     }
 
@@ -56,27 +54,27 @@ public class Grupo {
         this.id = id;
     }
 
-    public String getNome_contato() {
+    public String getNomeContato() {
         return nome_contato;
     }
 
-    public void setNome_contato(String nome_contato) {
+    public void setNomeContato(String nome_contato) {
         this.nome_contato = nome_contato;
     }
 
-    public String getEmail_contato() {
+    public String getEmailContato() {
         return email_contato;
     }
 
-    public void setEmail_contato(String email_contato) {
+    public void setEmailContato(String email_contato) {
         this.email_contato = email_contato;
     }
 
-    public String getNome_grupo() {
+    public String getNome() {
         return nome_grupo;
     }
 
-    public void setNome_grupo(String nome_grupo) {
+    public void setNome(String nome_grupo) {
         this.nome_grupo = nome_grupo;
     }
 
@@ -88,19 +86,19 @@ public class Grupo {
         this.horario = horario;
     }
 
-    public String getTelefone_grupo() {
+    public String getTelefone() {
         return telefone_grupo;
     }
 
-    public void setTelefone_grupo(String telefone_grupo) {
+    public void setTelefone(String telefone_grupo) {
         this.telefone_grupo = telefone_grupo;
     }
 
-    public String getConta_grupo() {
+    public String getConta() {
         return conta_grupo;
     }
 
-    public void setConta_grupo(String conta_grupo) {
+    public void setConta(String conta_grupo) {
         this.conta_grupo = conta_grupo;
     }
 
@@ -119,7 +117,8 @@ public class Grupo {
     public void setLocal(Local local) {
         this.local = local;
     }
-//local = db.relationship('Local', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))
+
+    //local = db.relationship('Local', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))
     //usuario = db.relationship('Usuario', backref=db.backref('post', lazy='dynamic', cascade='all,delete'))
 
 

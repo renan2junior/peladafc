@@ -28,7 +28,7 @@ public class PagamentoServiceTest {
     public void testCreatePagamento() throws Exception{
         List<Pagamento> pagamentos = s.listaPagamentos();
         for (Pagamento pagamento: pagamentos)
-            s.deletePagamento( pagamento.getUsuario(), pagamento.getGrupo(), pagamento.getMes_ano() );
+            s.deletePagamento( pagamento.getUsuario(), pagamento.getGrupo(), pagamento.getMesAno() );
 
         Pagamento t = new Pagamento();
         s.createPagamento(t);
@@ -41,7 +41,7 @@ public class PagamentoServiceTest {
     @Test
     public void testDeletePagamento() throws Exception{
         Pagamento pagamento = new Pagamento();
-        s.deletePagamento(pagamento.getUsuario(), pagamento.getGrupo(), pagamento.getMes_ano());
+        s.deletePagamento(pagamento.getUsuario(), pagamento.getGrupo(), pagamento.getMesAno());
     }
 
     @Test

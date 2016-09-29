@@ -30,8 +30,13 @@ public class Local {
     public Local() {
     }
 
-    public Local(Integer id) {
-        this.id = id;
+    public Local(String nome, String endereco, String nome_contato, String email_contato, String telefone_contato, String conta_deposito) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.nome_contato = nome_contato;
+        this.email_contato = email_contato;
+        this.telefone_contato = telefone_contato;
+        this.conta_deposito = conta_deposito;
     }
 
     public Local(int id, String nome, String endereco, String nome_contato, String email_contato, String telefone_contato, String conta_deposito) {
@@ -92,11 +97,11 @@ public class Local {
         this.telefone_contato = telefone_contato;
     }
 
-    public String getConta_deposito() {
+    public String getContaDeposito() {
         return conta_deposito;
     }
 
-    public void setConta_deposito(String conta_deposito) {
+    public void setContaDeposito(String conta_deposito) {
         this.conta_deposito = conta_deposito;
     }
 }

@@ -42,7 +42,7 @@ public class GrupoService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.print("Grupo : " + grupo.getNome_grupo());
+        System.out.print("Grupo : " + grupo.getNome());
         return grupo;
     }
 
