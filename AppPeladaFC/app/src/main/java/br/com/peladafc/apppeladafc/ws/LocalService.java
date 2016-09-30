@@ -6,6 +6,7 @@ import java.util.List;
 import br.com.peladafc.apppeladafc.model.Local;
 import br.com.peladafc.apppeladafc.util.UtilJson;
 import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by renanjunior on 9/27/16.
@@ -36,8 +37,14 @@ public class LocalService {
 
     public Local createLocal(Local local){
         Call<Local> call = localInterface.createLocal(local);
+        Response<Local> response;
+        int code = 0;
+        String msg = "";
         try {
-            local = call.execute().body();
+            response = call.execute();
+            code = response.code();
+            msg = response.message();
+            local = response.body();
         }catch (IOException e){
             e.printStackTrace();
         }

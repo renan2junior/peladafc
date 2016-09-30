@@ -5,6 +5,7 @@ import java.util.List;
 
 import br.com.peladafc.apppeladafc.model.Usuario;
 import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by renanjunior on 9/12/16.
@@ -21,7 +22,9 @@ public class UsuarioService {
     public List<Usuario> listaUsuarios(){
         Call<List<Usuario>> call = usuarioInterface.getUsuario();
         List<Usuario> usuarios = null;
-        try { usuarios = call.execute().body();
+        try {
+            Response<List<Usuario>> response = call.execute();
+            usuarios = response.body();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -42,7 +45,7 @@ public class UsuarioService {
         return usuario;
     }
 
-    public void deleteUsuario(String id){
+    public void deleteUsuario(Integer id){
         Call<Void> call = usuarioInterface.deleteUsuario(id);
         try{
             call.execute().body();
@@ -51,11 +54,24 @@ public class UsuarioService {
         }
     }
 
-    public Usuario getUsuarioByID(String id){
+    public Usuario getUsuarioByID(Integer id){
         Call<Usuario> call = usuarioInterface.getUsuarioByID(id);
         Usuario usuario = null;
         try {
              usuario= call.execute().body();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return usuario;
+    }
+
+    public Usuario getUsuarioByLogin(String email){
+        Call<Usuario> call = usuarioInterface.getUsuarioByLogin(email);
+        Usuario usuario = null;
+        Response<Usuario> response;
+        try {
+            response = call.execute();
+            usuario = response.body();
         }catch (IOException e){
             e.printStackTrace();
         }

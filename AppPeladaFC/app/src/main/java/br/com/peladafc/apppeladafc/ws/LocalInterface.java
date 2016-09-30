@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.com.peladafc.apppeladafc.model.Local;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;

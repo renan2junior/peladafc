@@ -20,7 +20,7 @@ public interface UsuarioInterface {
     Call<List<Usuario>> getUsuario();
 
     @GET("/usuario/{id}")
-    Call<Usuario> getUsuarioByID(@Path("id") String id);
+    Call<Usuario> getUsuarioByID(@Path("id") Integer id);
 
     @GET("/usuario/{login}")
     Call<Usuario> getUsuarioByLogin(@Path("login") String login);
@@ -29,7 +29,7 @@ public interface UsuarioInterface {
     Call <Usuario> createUsuario(@Body Usuario usuario);
 
     @DELETE("/usuario/{id}")
-    Call<Void> deleteUsuario(@Path("id") String id);
+    Call<Void> deleteUsuario(@Path("id") Integer id);
 
     @PUT("/usuario/")
     Call<Usuario> updateUsuario(@Body Usuario usuario);

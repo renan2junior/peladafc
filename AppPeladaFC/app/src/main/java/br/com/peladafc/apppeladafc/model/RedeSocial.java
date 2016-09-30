@@ -6,7 +6,7 @@ package br.com.peladafc.apppeladafc.model;
 
 public class RedeSocial {
 
-    private int id;
+    private Integer id;
     private String descricao;
 
     public RedeSocial() {
@@ -17,11 +17,11 @@ public class RedeSocial {
         this.descricao = descricao;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

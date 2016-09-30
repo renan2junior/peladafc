@@ -17,21 +17,16 @@ public class LocalServiceTest {
     LocalService s;
     private List<Local> locais;
 
-    public LocalServiceTest() {
-        createLocalData();
-    }
-
     @Before
     public void initObjects(){
         s = new LocalService();
     }
 
-    @Before
-    public void createLocalData(){
+    public List<Local> createLocalData(){
         locais = new ArrayList<Local>();
 
         locais.add(new Local(
-                "Colegio",
+                "iiooytfjfhgfdfhfdsdfsaoooo",
                 "Rua Coracao de Maria",
                 "Joao",
                 "joao@gmail.com",
@@ -47,14 +42,17 @@ public class LocalServiceTest {
                 "21 555555",
                 "1444 / 2323"
         ));
+
+        return locais;
+    }
+
+    public Local saveLocalData(Local local){
+        initObjects();
+        return s.createLocal(local);
     }
 
     public List<Local> getLocais(){
         return locais;
-    }
-
-    public Local getLocal(){
-        return locais.get(0);
     }
 
     @Test

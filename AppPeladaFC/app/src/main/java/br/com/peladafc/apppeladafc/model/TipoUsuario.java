@@ -11,8 +11,8 @@ public class TipoUsuario {
     public TipoUsuario() {
     }
 
-    public TipoUsuario(Integer id) {
-        this.id = id;
+    public TipoUsuario(String descricao) {
+        this.descricao = descricao;
     }
 
     public TipoUsuario(Integer id, String descricao) {
